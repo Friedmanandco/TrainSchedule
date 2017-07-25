@@ -85,12 +85,15 @@ console.log(childSnapshot.val());
 
   // Calculate the months worked using hardcore math
   // To calculate the months worked
-  var empMonths = moment().diff(moment.unix(traStart, "hh:mm",  "X"), "months");
+  var empMonths = moment().diff(moment.unix(traStart, "X"), " h:mm:ss ");
   console.log(empMonths);
 
   // Calculate the total billed rate
   var empBilled = empMonths * traFre;
   console.log(empBilled);
+
+
+
 
   // Add each train's data into the table
   $("#train-table > tbody").append("<tr><td>" + traName + "</td><td>" + traDes + "</td><td>" +
